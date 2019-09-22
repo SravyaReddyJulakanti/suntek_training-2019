@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+    int a,b,m,temp,gcd=1;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    if(a>b)
+        m=a;
+    else
+        m=b;
+    for(int i=1;i<=m;i++)
+    {
+        if(a%i==0 && b%i==0)
+        {
+            if(i>gcd)
+            {
+               temp=gcd;
+               gcd=i;
+               i=temp;
+            }
+        }
+
+    }
+    printf("%d",gcd);
+}
